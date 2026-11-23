@@ -43,7 +43,7 @@ $run->cost();       // 0.0123 (USD, estimated from config/agent.php)
 ## Requirements
 
 - PHP 8.3 or newer
-- Laravel 11 or 12
+- Laravel 12 (Laravel 11 is end-of-life and has unpatched security advisories)
 - An API key for Anthropic or OpenAI (or an OpenAI-compatible server)
 
 ## Installation
