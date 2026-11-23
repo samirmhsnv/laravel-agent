@@ -1,0 +1,70 @@
+{
+    "name": "samirmhsnv/laravel-agent",
+    "description": "AI agents with tool calling for Laravel. Provider-agnostic, with human-in-the-loop approvals and a read-only SQL tool built in.",
+    "keywords": [
+        "laravel",
+        "ai",
+        "agent",
+        "llm",
+        "tool-calling",
+        "anthropic",
+        "claude",
+        "openai",
+        "guardrails"
+    ],
+    "homepage": "https://github.com/samirmhsnv/laravel-agent",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Samir Mammadhasanov",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/contracts": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0",
+        "illuminate/events": "^11.0|^12.0",
+        "illuminate/http": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SamirMhsnv\\LaravelAgent\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SamirMhsnv\\LaravelAgent\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "lint": "vendor/bin/pint",
+        "lint:check": "vendor/bin/pint --test"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SamirMhsnv\\LaravelAgent\\AgentServiceProvider"
+            ],
+            "aliases": {
+                "Agent": "SamirMhsnv\\LaravelAgent\\Facades\\Agent"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
